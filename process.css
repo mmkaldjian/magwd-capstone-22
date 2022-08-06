@@ -1,0 +1,380 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: contain; /*keeps images proportional*/
+}
+
+html {
+  --green: #b2bc80;
+  --gray-light: #449384;
+  --light-green: rgba(178, 188, 128, 50%);
+  --yellow: #ffcc33;
+  --blue: #232e78;
+  --font-sans-serif: "Enriqueta", serif;
+  --font-header: "Helvetica", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans-serif);
+  font-size: medium;
+  color: black;
+  line-height: 1.5;
+  background-color: rgba(178, 188, 128, 50%);
+  background-image: url("img/arrows-09-09-09.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+.header-image {
+  padding: 0;
+  background-size: cover;
+}
+
+h1, h2 {
+  font-family: var(--font-header);
+  color: var(--blue);
+  font-size: xx-large;
+  margin: 0;
+}
+
+h3{
+  font-family: var(--font-sans-serif);
+}
+
+a {
+  /* color: white; */
+}
+
+ul {
+    list-style-image: url('img/blue-arrow-ul-small.png');
+  }
+
+.caption {
+text-align: center;
+font-size: x;
+caption-side: top;
+/*why isn't any of this working?*/
+}
+
+blockquote {
+    font-family: var(--font-header);
+    font-weight: 100;
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-size: xx-large;
+  }
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote p {
+    display: inline;
+  }
+
+  .quote-author {
+    font-size: small;
+    padding: 
+  }
+
+
+/*resizing flexed images and gifs*/
+.resize {
+  width: 300px;
+  height: auto;
+  margin: 10px;
+}
+
+.resize-medium {
+    width: 480px;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .resize-small {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    margin: 30px 10px;
+  }
+
+  .resize-smaller {
+    width: 100px;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+.container {
+  flex-wrap: wrap;
+  max-width: 75rem;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/*line break border*/
+hr {
+    border-top: 3px dotted var(--green);
+}
+
+/*header*/
+
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /*name in header*/
+  .header--title {
+
+  }
+
+  /*horizontal menu*/
+  .menu{
+    display: flex;
+    flex-wrap: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .menu a{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+  }
+
+  .header2 {
+    display: flex;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    align-items: center;
+  }
+  /*add something that shows which menu item is selected here*/
+
+/*Hook*/
+  .header-text {
+    font-size: 5rem;
+  }
+
+  .block {
+    display: flex;
+    margin: 1rem 0;
+    align-items: center;
+  }
+
+  /* .block-text .block-subhead {
+    flex: 1;
+  } */
+
+.block-text {
+    padding-right: 5rem;
+  }
+
+  .block-image { /*why can't I get this wrap?*/
+    padding: 2rem;
+  }
+
+  .block-image-resize {
+    width: 500px;
+    height: auto;
+  }
+  
+/*Problem Statement*/
+
+.problems {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 3rem;
+}
+
+.item {
+  display: flex;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 50px;
+  margin: 20px;
+  border-radius: 15px;
+  /* border: 8px solid var(--blue); */
+}
+
+.item-img {
+  padding: 2rem 2rem 2rem, 0;
+}
+
+.about--title {
+  text-align: center;
+}
+
+/*prototypes*/
+.prototypes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 75rem;
+  margin: auto;
+  padding: 0 1rem;
+  object-fit: contain;
+}
+/*footer*/
+.footer {
+  background: var(--green);
+  color: white;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer--list {
+  margin: 0;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer--list a {
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.arrows {
+    padding: 0 4rem 0 0;
+}
+
+/*card*/
+.card {
+  color: white;
+  max-width: 280px;
+  height: auto;
+  background-image: linear-gradient(to bottom right, var(--green), var(--gray-light));
+  border-radius: 30px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.card h2{
+  color: white;
+}
+
+.card h3 {
+  font-weight: 100;
+  font-family: Helvetica;
+}
+
+.card h4 {
+  font-weight: bold;
+  font-size: medium;
+  font-family: Helvetica;
+  font-variant: small-caps;
+  padding: 0;
+}
+
+.one-line {
+  display: inline-block;
+} /*this isn't working*/
+
+
+a:hover, a:focus, a:active{
+  text-decoration: none;
+}
+/* 
+a:visited {
+  color: var(--gray-light);
+} */
+
+a:link {
+  text-decoration: none;
+  color: var(--light-green);
+}
+
+a.menu-links {
+  font-family: Helvetica, sans-serif;
+
+  position: relative;
+  display: block;
+  padding: 16px 0;
+  margin: 0 12px;
+  letter-spacing: 1px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+  color: #000;
+}
+a.menu-links::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: color 0.1s,transform 0.2s ease-out;
+}
+a.menu-links:active::before {
+  background-color: #000;
+}
+a.menu-links:hover::before, a.menu-links:focus::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+blockquote {
+  font-family: var(--font-header);
+  font-weight: 100;
+  background: #f9f9f9;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  font-size: x-large;
+  border: solid 2px;
+  border-radius: 15px;
+  padding: 20px 30px 20px 30px;
+  box-shadow: 13px 13px 0 0 white,
+              15px 15px 0 0 black,
+              15px 11px 0 0 black,
+              11px 15px 0 0 black;
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+.quote-author {
+  font-size: medium;
+}
