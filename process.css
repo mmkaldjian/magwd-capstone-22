@@ -140,7 +140,12 @@ hr {
 
   /*name in header*/
   .header--title {
-
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    text-transform: uppercase;
   }
 
   /*horizontal menu*/
